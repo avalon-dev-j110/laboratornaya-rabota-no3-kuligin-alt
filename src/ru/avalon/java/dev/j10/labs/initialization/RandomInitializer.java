@@ -25,5 +25,14 @@ public class RandomInitializer implements Initializer {
         /*
          * TODO(Студент): Реализовать метод initialize класса RandomInitializer
          */
+        
+        // Заполнение массива случайными числами:
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) Math.round((Math.random() * 100) - 50);
+        }
+        // Вывод на экран массива:
+        for(int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
     }
 }

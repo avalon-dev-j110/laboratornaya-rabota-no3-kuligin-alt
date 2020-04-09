@@ -30,5 +30,18 @@ public class FibonacciInitializer implements Initializer {
         /*
          * TODO(Студент): Реализовать метод initialize класса FibonacciInitializer
          */
+        
+        // Заполнение массива числами фибоначи:
+        for(int i = 0; i < array.length; i++) {
+            if(i < 2) {
+                array[i] = 1;
+            } else {
+                array[i] = (array[i -1] + array[i - 2]);
+            }
+        }
+        // Вывод на экран массива:
+        for(int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
     }
 }
