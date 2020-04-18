@@ -23,33 +23,33 @@ public class Application {
         System.out.println();
         
         
-        RandomInitializer randomBubble = new RandomInitializer();
+        RandomInitializer randomArray = new RandomInitializer(-50, 50);
         
         System.out.println("Массив, заполненный случайными числами:");
-        randomBubble.initialize(array);
+        randomArray.initialize(array);
         System.out.println();
         
-        
-        BubbleSort bubbleDemo = new BubbleSort(); // Пузырьковая сортировка.
-        
+        BubbleSort bubbleDemo = new BubbleSort();
         System.out.println("Пузырьковая сортировка:");
         bubbleDemo.sort(array); // Демонстрация пузырьковой сортировки массива.  
         System.out.println();
         
         
-        RandomInitializer randomSelect = new RandomInitializer();
+        System.out.println("Массив, заполненный случайными числами:");
+        randomArray.initialize(array);
+        System.out.println();
         
-        SelectionSort selectDemo = new SelectionSort(); // Сортировка выбором.
-        
+        SelectionSort selectDemo = new SelectionSort();
         System.out.println("Сортировка выбором:");
         selectDemo.sort(array); // Демонстрация сортировки выбором.  
         System.out.println();
         
+          
+        System.out.println("Массив, заполненный случайными числами:");
+        randomArray.initialize(array);
+        System.out.println();
         
-        RandomInitializer randomShell = new RandomInitializer();
-        
-        ShellSort shellDemo = new ShellSort(); // Сортировка методом Шелла
-        
+        ShellSort shellDemo = new ShellSort();
         System.out.println("Сортировка Шелла:");
         shellDemo.sort(array); // Демонстрация сортировки.
 

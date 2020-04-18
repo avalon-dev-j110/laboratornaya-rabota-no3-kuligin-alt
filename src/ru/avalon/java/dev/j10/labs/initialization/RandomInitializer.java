@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs.initialization;
 
+import java.util.Arrays;
 import ru.avalon.java.dev.j10.labs.Initializer;
 
 /**
@@ -14,6 +15,13 @@ import ru.avalon.java.dev.j10.labs.Initializer;
  * инициализации.
  */
 public class RandomInitializer implements Initializer {
+    int a; // Нижняя граница диапазона случайных чисел
+    int b; // Верхняя граница диапазона случайных чисел
+
+    public RandomInitializer(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
 
     /**
      * Выполняет инициализацию массива, значениями
@@ -21,18 +29,17 @@ public class RandomInitializer implements Initializer {
      *
      * @param array массив, подлежащий инициализации
      */
+    @Override
     public void initialize(int[] array) {
         /*
          * TODO(Студент): Реализовать метод initialize класса RandomInitializer
          */
+        int c = b - a; // Диапазон случайных чисел
         
-        // Заполнение массива случайными числами:
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) Math.round((Math.random() * 100) - 50);
+            array[i]  = (int) Math.round((Math.random() * c) + a);
         }
-        // Вывод на экран массива:
-        for(int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
+        
+        System.out.println(Arrays.toString(array));
     }
 }

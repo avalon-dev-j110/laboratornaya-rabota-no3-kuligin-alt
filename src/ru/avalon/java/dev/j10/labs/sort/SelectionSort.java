@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs.sort;
 
+import java.util.Arrays;
 import ru.avalon.java.dev.j10.labs.Sort;
 
 /**
@@ -36,8 +37,9 @@ public class SelectionSort implements Sort {
             array[least] = tmp;
         }
         // Вывод на экран отсортированного массива:
-        for(int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
+        //for(int i = 0; i < array.length; i++) {
+        //    System.out.println(array[i]);
+        //}
+        System.out.println(Arrays.toString(array));
     }
 }

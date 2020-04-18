@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs.sort;
 
+import java.util.Arrays;
 import ru.avalon.java.dev.j10.labs.Sort;
 
 /**
@@ -30,10 +31,8 @@ public class ShellSort implements Sort {
                 insertionSort (array, step, inc);
             }
         }
-        // Вывод на экран отсортированного массива:
-        for(int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
+        
+        System.out.println(Arrays.toString(array));
     }
     
     private void insertionSort (int[] array, int start, int inc) {
