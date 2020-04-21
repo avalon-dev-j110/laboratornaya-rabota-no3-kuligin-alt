@@ -14,7 +14,7 @@ public interface Sort {
     /**
      * Выполняет сортировку переданного массива.
      *
-     * @param array массив, подлежащий сортировке
+     * @param array массив,  подлежащий сортировке
      */
     void sort(int[] array);
 }
